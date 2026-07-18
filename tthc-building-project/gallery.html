@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="tn">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Tshenolo The Holy Church</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+color:#333;
+}
+
+header{
+
+background:#800020;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo img{
+
+width:60px;
+
+}
+
+.logo h2{
+
+color:white;
+font-size:24px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:gold;
+
+}
+
+.hero{
+
+background:linear-gradient(rgba(128,0,32,.88),rgba(128,0,32,.88));
+padding:90px 20px;
+text-align:center;
+color:white;
+
+}
+
+.hero h1{
+
+font-size:3rem;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+max-width:900px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+
+}
+
+.container{
+
+width:90%;
+max-width:1300px;
+margin:70px auto;
+
+}
+
+.section-title{
+
+text-align:center;
+font-size:2.5rem;
+color:#800020;
+margin-bottom:20px;
+
+}
+
+.section-text{
+
+text-align:center;
+max-width:900px;
+margin:auto auto 50px;
+font-size:18px;
+
+}
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+
+}
+
+.photo{
+
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.1);
+transition:.3s;
+
+}
+
+.photo:hover{
+
+transform:translateY(-8px);
+
+}
+
+.photo img{
+
+width:100%;
+height:250px;
+object-fit:cover;
+cursor:pointer;
+
+}
+
+.photo-content{
+
+padding:20px;
+
+}
+
+.photo-content h3{
+
+color:#800020;
+margin-bottom:10px;
+
+}
+
+.photo-content p{
+
+line-height:1.7;
+
+}
+
+.quote{
+
+margin-top:70px;
+background:#800020;
+color:white;
+padding:50px;
+border-radius:20px;
+text-align:center;
+
+}
+
+.quote h2{
+
+margin-bottom:20px;
+
+}
+
+.quote p{
+
+font-size:18px;
+line-height:1.8;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="logo.png" alt="Logo">
+
+<h2>Tshenolo The Holy Church</h2>
+
+</div>
+
+<nav>
+
+<a href="index.html">Gae</a>
+
+<a href="about.html">Ka Rona</a>
+
+<a href="progress.html">Kago</a>
+
+<a href="materials.html">Didirisiwa</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact.html">Ikgolaganye</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>
+
+Gallery ya Tshenolo The Holy Church
+
+</h1>
+
+<p>
+
+Re boloka tsotlhe tsotlhe tsotlhe tsotlhe tse di bontshang lorato, tumelo, kutlwano le kgolo ya kereke ya rona. Lebelela ditshwantsho tsa ditirelo, dikopano, basha, Sunday School le porojeke ya kago ya Ntlo ya Tirelo.
+
+</p>
+
+</section>
+
+<section class="container">
+
+<h2 class="section-title">
+
+Ditshwantsho tsa Kereke
+
+</h2>
+
+<p class="section-text">
+
+Ditshwantsho tsotlhe di bontsha botshelo jwa Tshenolo The Holy Church le tiro e e dirwang mo Moretele Region.
+
+</p>
+
+<div class="gallery">
+<!-- ============================= -->
+<!-- NTLO YA TIRELO -->
+<!-- ============================= -->
+
+<div class="photo">
+
+<img src="images/church1.jpg" alt="Ntlo ya Tirelo">
+
+<div class="photo-content">
+
+<h3>⛪ Ntlo ya Tirelo</h3>
+
+<p>
+
+Lefelo le Badimo ba kopanang teng go obamela le go godisa tumelo.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ============================= -->
+<!-- KAGO -->
+<!-- ============================= -->
+
+<div class="photo">
+
+<img src="images/building1.jpg" alt="Building Project">
+
+<div class="photo-content">
+
+<h3>🏗️ Kago ya Ntlo ya Tirelo</h3>
+
+<p>
+
+Porojeke ya go aga Ntlo ya Tirelo e tswelela ka thuso ya badumedi.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ============================= -->
+<!-- SUNDAY SERVICE -->
+<!-- ============================= -->
+
+<div class="photo">
+
+<img src="images/service1.jpg" alt="Sunday Service">
+
+<div class="photo-content">
+
+<h3>🙏 Tirelo ya Sontaga</h3>
+
+<p>
+
+Badumedi ba kopane go obamela le go utlwa Lefoko.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ============================= -->
+<!-- HOLY COMMUNION -->
+<!-- ============================= -->
+
+<div class="photo">
+
+<img src="images/service2.jpg" alt="Holy Service">
+
+<div class="photo-content">
+
+<h3>✨ Tirelo e Kgethegileng</h3>
+
+<p>
+
+Dinako tsa kobamelo le tsotlhe tsotlhe tsa tumelo.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ============================= -->
+<!-- CHOIR -->
+<!-- ============================= -->
+
+<div class="photo">
+
+<img src="images/choir.jpg" alt="Choir">
+
+<div class="photo-content">
+
+<h3>🎵 Khwaere</h3>
+
+<p>
+
+Go baka le go tlotlomatsa Modimo ka dipina tsa tumelo.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ============================= -->
+<!-- CONFERENCE -->
+<!-- ============================= -->
+
+<div class="photo">
+
+<img src="images/conference.jpg" alt="Conference">
+
+<div class="photo-content">
+
+<h3>🎉 Kopano ya Kereke</h3>
+
+<p>
+
+Dikopano tse dikgolo tsotlhe tsa Tshenolo The Holy Church.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ============================= -->
+<!-- BUILDING MESSAGE -->
+<!-- ============================= -->
+
+<section class="quote">
+
+<h2>
+
+🏛️ Kago ya Ntlo ya Tirelo
+
+</h2>
+
+<p>
+
+Re aga Ntlo ya Tirelo e e tla direlang dikokomana tsotlhe. Re leboga mongwe le mongwe yo o tshegetsang porojeke ka madi, didirisiwa kgotsa dithapelo.
+
+</p>
+
+</section>
+
+<!-- ============================= -->
+<!-- YOUTH SECTION -->
+<!-- ============================= -->
+
+<section class="container">
+
+<h2 class="section-title">
+
+Basha ba Tshenolo
+
+</h2>
+
+<p class="section-text">
+
+Ditshwantsho tsotlhe tsa basha ba Moretele Region mo ditiragalong tsotlhe.
+
+</p>
+
+<div class="gallery">
+<!-- ====================================== -->
+<!-- YOUTH GALLERY -->
+<!-- ====================================== -->
+
+<div class="photo">
+
+<img src="images/youth1.jpg" alt="Basha">
+
+<div class="photo-content">
+
+<h3>👨‍👩‍👧‍👦 Basha ba Moretele</h3>
+
+<p>
+
+Basha ba kopane mo tirelong ya kobamelo le kgolo ya semowa.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="photo">
+
+<img src="images/youth2.jpg" alt="Youth Conference">
+
+<div class="photo-content">
+
+<h3>🎉 Kopano ya Basha</h3>
+
+<p>
+
+Dikopano tsa basha tsotlhe tsotlhe tsa Moretele Region.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="photo">
+
+<img src="images/youth3.jpg" alt="Leadership">
+
+<div class="photo-content">
+
+<h3>👑 Katiso ya Boeteledipele</h3>
+
+<p>
+
+Go godisa baeteledipele ba ka moso ba kereke.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- SUNDAY SCHOOL -->
+<!-- ====================================== -->
+
+<section class="container">
+
+<h2 class="section-title">
+
+📖 Sunday School
+
+</h2>
+
+<p class="section-text">
+
+Go ruta bana Baebele, maitsholo le tumelo go tloga bonyenyaneng.
+
+</p>
+
+<div class="gallery">
+
+<div class="photo">
+
+<img src="images/sundayschool1.jpg" alt="Sunday School">
+
+<div class="photo-content">
+
+<h3>📚 Baebele</h3>
+
+<p>
+
+Bana ba ithuta Baebele le dithuto tsa tumelo.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="photo">
+
+<img src="images/sundayschool2.jpg" alt="Children">
+
+<div class="photo-content">
+
+<h3>😊 Bana</h3>
+
+<p>
+
+Go aga motheo wa tumelo mo baneng.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="photo">
+
+<img src="images/sundayschool3.jpg" alt="Teaching">
+
+<div class="photo-content">
+
+<h3>✝️ Dithuto</h3>
+
+<p>
+
+Go ithuta Baebele ka lorato le boitumelo.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- COMMUNITY OUTREACH -->
+<!-- ====================================== -->
+
+<section class="container">
+
+<h2 class="section-title">
+
+❤️ Tirelo ya Setšhaba
+
+</h2>
+
+<p class="section-text">
+
+Go direla setšhaba ke karolo ya botlhokwa ya tumelo ya rona.
+
+</p>
+
+<div class="gallery">
+
+<div class="photo">
+
+<img src="images/outreach1.jpg" alt="Outreach">
+
+<div class="photo-content">
+
+<h3>🤝 Thuso ya Setšhaba</h3>
+
+<p>
+
+Go thusa malapa le ba ba tlhokang.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="photo">
+
+<img src="images/outreach2.jpg" alt="Community">
+
+<div class="photo-content">
+
+<h3>🥫 Meneelo</h3>
+
+<p>
+
+Go aba dijo, diaparo le tsotlhe tse di tlhokegang.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="photo">
+
+<img src="images/outreach3.jpg" alt="Mandela Day">
+
+<div class="photo-content">
+
+<h3>🌍 Tirelo ya Setšhaba</h3>
+
+<p>
+
+Go direla setšhaba ka lorato le kutlwano.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ====================================== -->
+<!-- GALLERY MESSAGE -->
+<!-- ====================================== -->
+
+<section class="quote">
+
+<h2>
+
+📸 Dikgakologelo tsa Tumelo
+
+</h2>
+
+<p>
+
+Setshwantsho sengwe le sengwe se re gakolola lorato, kutlwano le tiro e Kgolo e e dirwang mo Tshenolo The Holy Church. Re leboga badumedi botlhe ba ba tswelang pele go aga kereke ya rona.
+
+</p>
+
+</section>
+<!-- ====================================== -->
+<!-- LIGHTBOX -->
+<!-- ====================================== -->
+
+<div id="lightbox" class="lightbox">
+
+<span class="close">&times;</span>
+
+<img id="lightbox-img" src="" alt="Gallery Image">
+
+</div>
+
+<!-- ====================================== -->
+<!-- FOOTER -->
+<!-- ====================================== -->
+
+<footer style="background:#800020;color:white;padding:50px 20px;margin-top:80px;">
+
+<div style="max-width:1200px;margin:auto;text-align:center;">
+
+<img src="logo.png" alt="Church Logo" width="90">
+
+<h2 style="margin-top:20px;">
+
+Tshenolo The Holy Church
+
+</h2>
+
+<p style="margin-top:15px;">
+
+Moretele Region
+
+</p>
+
+<br>
+
+<p>
+
+📍 Moretele Region
+
+</p>
+
+<p>
+
+📧 moreteleregionyouthc@gmail.com
+
+</p>
+
+<p>
+
+🌐 Walking in Faith • Growing Together
+
+</p>
+
+<br>
+
+<p>
+
+© <span id="year"></span> Tshenolo The Holy Church
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- ====================================== -->
+<!-- LIGHTBOX STYLE -->
+<!-- ====================================== -->
+
+<style>
+
+.lightbox{
+
+display:none;
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+padding:20px;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+box-shadow:0 0 25px rgba(255,255,255,.2);
+
+}
+
+.close{
+
+position:absolute;
+top:20px;
+right:35px;
+font-size:45px;
+color:white;
+cursor:pointer;
+
+}
+
+.close:hover{
+
+color:gold;
+
+}
+
+</style>
+
+<!-- ====================================== -->
+<!-- JAVASCRIPT -->
+<!-- ====================================== -->
+
+<script>
+
+// Current Year
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+// Lightbox
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxImg =
+document.getElementById("lightbox-img");
+
+const images =
+document.querySelectorAll(".photo img");
+
+images.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.style.display="flex";
+
+lightboxImg.src=img.src;
+
+});
+
+});
+
+document.querySelector(".close").onclick=function(){
+
+lightbox.style.display="none";
+
+}
+
+lightbox.onclick=function(e){
+
+if(e.target===lightbox){
+
+lightbox.style.display="none";
+
+}
+
+}
+
+// Card Animation
+
+const cards =
+document.querySelectorAll(".photo");
+
+const observer =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(40px)";
+
+card.style.transition=".7s";
+
+observer.observe(card);
+
+});
+
+</script>
+
+</body>
+
+</html>
