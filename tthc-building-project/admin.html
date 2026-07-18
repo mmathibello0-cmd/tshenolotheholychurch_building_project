@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | Tshenolo The Holy Church</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+
+background:#800020;
+color:white;
+padding:25px;
+text-align:center;
+
+}
+
+header h1{
+
+font-size:2.2rem;
+
+}
+
+header p{
+
+margin-top:10px;
+
+}
+
+.login-box{
+
+width:420px;
+max-width:95%;
+margin:60px auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.login-box h2{
+
+text-align:center;
+color:#800020;
+margin-bottom:30px;
+
+}
+
+.login-box input{
+
+width:100%;
+padding:15px;
+margin:12px 0;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+
+}
+
+.login-box button{
+
+width:100%;
+padding:15px;
+background:#800020;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:17px;
+transition:.3s;
+
+}
+
+.login-box button:hover{
+
+background:#5d0018;
+
+}
+
+#error{
+
+color:red;
+text-align:center;
+margin-top:15px;
+
+}
+
+.dashboard{
+
+display:none;
+padding:40px;
+
+}
+
+.dashboard h2{
+
+color:#800020;
+margin-bottom:20px;
+
+}
+
+.card{
+
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+margin-bottom:30px;
+
+}
+
+.card h3{
+
+color:#800020;
+margin-bottom:20px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+
+}
+
+label{
+
+display:block;
+margin-top:15px;
+margin-bottom:8px;
+font-weight:600;
+
+}
+
+input{
+
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+
+}
+
+.saveBtn{
+
+margin-top:25px;
+padding:15px 35px;
+background:gold;
+color:#800020;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+
+}
+
+.saveBtn:hover{
+
+background:#ffd633;
+
+}
+
+footer{
+
+margin-top:60px;
+background:#800020;
+color:white;
+text-align:center;
+padding:30px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Tshenolo The Holy Church</h1>
+
+<p>Building Project Administration Dashboard</p>
+
+</header>
+
+<!-- LOGIN -->
+
+<div class="login-box" id="loginBox">
+
+<h2>
+
+<i class="fas fa-lock"></i>
+
+Admin Login
+
+</h2>
+
+<input
+type="password"
+id="password"
+placeholder="Enter Admin Password">
+
+<button onclick="login()">
+
+Login
+
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div class="dashboard" id="dashboard">
+
+<h2>
+
+<i class="fas fa-chart-line"></i>
+
+Building Project Dashboard
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+<i class="fas fa-money-bill-wave"></i>
+
+Fundraising
+
+</h3>
+
+<label>Total Goal (R)</label>
+
+<input
+type="number"
+id="goal">
+
+<label>Total Raised (R)</label>
+
+<input
+type="number"
+id="raised">
+
+</div>
+
+<div class="card">
+
+<h3>
+
+<i class="fas fa-chart-pie"></i>
+
+Current Progress
+
+</h3>
+
+<p>
+
+This section updates the progress page automatically.
+
+</p>
+
+<br>
+
+<p>
+
+Current Goal:
+
+<strong id="goalPreview">
+
+R0
+
+</strong>
+
+</p>
+
+<br>
+
+<p>
+
+Current Raised:
+
+<strong id="raisedPreview">
+
+R0
+
+</strong>
+
+</p>
+
+<br>
+
+<p>
+
+Progress:
+
+<strong id="percentPreview">
+
+0%
+
+</strong>
+
+</p>
+
+</div>
+
+</div>
+<!-- ================= BUILDING MATERIALS ================= -->
+
+<div class="grid">
+
+    <!-- BRICKS -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-border-all"></i>
+            Ditena
+        </h3>
+
+        <label>Total Ditena Tse di Tlhokegang</label>
+        <input type="number" id="bricksTotal" placeholder="25000">
+
+        <label>Ditena Tse di Amogetsweng</label>
+        <input type="number" id="bricksRaised" placeholder="9000">
+
+    </div>
+
+    <!-- CEMENT -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-cubes"></i>
+            Samente
+        </h3>
+
+        <label>Total Bags</label>
+        <input type="number" id="cementTotal">
+
+        <label>Bags Tse di Amogetsweng</label>
+        <input type="number" id="cementRaised">
+
+    </div>
+
+    <!-- WINDOWS -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-window-maximize"></i>
+            Matlhabaphefo
+        </h3>
+
+        <label>Total Windows</label>
+        <input type="number" id="windowsTotal">
+
+        <label>Windows Tse di Amogetsweng</label>
+        <input type="number" id="windowsRaised">
+
+    </div>
+
+    <!-- DOORS -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-door-open"></i>
+            Mabati
+        </h3>
+
+        <label>Total Doors</label>
+        <input type="number" id="doorsTotal">
+
+        <label>Doors Tse di Amogetsweng</label>
+        <input type="number" id="doorsRaised">
+
+    </div>
+
+    <!-- ROOF -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-home"></i>
+            Marulelo
+        </h3>
+
+        <label>Total Roofing Sheets</label>
+        <input type="number" id="roofTotal">
+
+        <label>Roofing Sheets Received</label>
+        <input type="number" id="roofRaised">
+
+    </div>
+
+    <!-- PAINT -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-paint-roller"></i>
+            Dipente
+        </h3>
+
+        <label>Total Paint Buckets</label>
+        <input type="number" id="paintTotal">
+
+        <label>Paint Received</label>
+        <input type="number" id="paintRaised">
+
+    </div>
+
+    <!-- CHAIRS -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-chair"></i>
+            Ditulo
+        </h3>
+
+        <label>Total Chairs</label>
+        <input type="number" id="chairsTotal">
+
+        <label>Chairs Donated</label>
+        <input type="number" id="chairsRaised">
+
+    </div>
+
+    <!-- ELECTRICAL -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-lightbulb"></i>
+            Motlakase
+        </h3>
+
+        <label>Total Electrical Items</label>
+        <input type="number" id="electricalTotal">
+
+        <label>Electrical Items Received</label>
+        <input type="number" id="electricalRaised">
+
+    </div>
+
+    <!-- PLUMBING -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-faucet"></i>
+            Plumbing
+        </h3>
+
+        <label>Total Plumbing Items</label>
+        <input type="number" id="plumbingTotal">
+
+        <label>Items Received</label>
+        <input type="number" id="plumbingRaised">
+
+    </div>
+
+</div>
+
+<!-- ================= QUICK SUMMARY ================= -->
+
+<div class="card">
+
+    <h3>
+
+        <i class="fas fa-chart-bar"></i>
+
+        Kakaretso
+
+    </h3>
+
+    <p>
+
+        Tsenya dipalopalo tsotlhe tsa meneelo mo godimo.
+
+        Fa o sena go fetsa, tobetsa <strong>Save Changes</strong> mme website e tla ntšhafala ka yone.
+
+    </p>
+
+</div>
+<!-- ================= PROJECT UPDATE ================= -->
+
+<div class="grid">
+
+    <!-- PROJECT UPDATE -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-bullhorn"></i>
+            Morago Ga Dikgang
+        </h3>
+
+        <label>Latest Project Update</label>
+
+        <textarea
+            id="latestUpdate"
+            rows="6"
+            style="width:100%;padding:15px;border-radius:10px;border:1px solid #ccc;"
+            placeholder="Kwala pegelo ya porojeke...">
+        </textarea>
+
+    </div>
+
+    <!-- DONOR OF THE MONTH -->
+
+    <div class="card">
+
+        <h3>
+            <i class="fas fa-award"></i>
+            Monei wa Kgwedi
+        </h3>
+
+        <label>Leina</label>
+
+        <input
+            type="text"
+            id="donorName"
+            placeholder="Mpho Mokwena">
+
+        <label>Meneelo</label>
+
+        <input
+            type="text"
+            id="donorAmount"
+            placeholder="R50 000">
+
+    </div>
+
+</div>
+
+<!-- ================= PROJECT STATUS ================= -->
+
+<div class="card">
+
+<h3>
+
+<i class="fas fa-tasks"></i>
+
+Boemo jwa Porojeke
+
+</h3>
+
+<label>
+
+Foundation
+
+</label>
+
+<select id="foundationStatus" style="width:100%;padding:12px;border-radius:8px;">
+
+<option>Not Started</option>
+
+<option>In Progress</option>
+
+<option>Completed</option>
+
+</select>
+
+<label>
+
+Walls
+
+</label>
+
+<select id="wallsStatus" style="width:100%;padding:12px;border-radius:8px;">
+
+<option>Not Started</option>
+
+<option>In Progress</option>
+
+<option>Completed</option>
+
+</select>
+
+<label>
+
+Roof
+
+</label>
+
+<select id="roofStatus" style="width:100%;padding:12px;border-radius:8px;">
+
+<option>Not Started</option>
+
+<option>In Progress</option>
+
+<option>Completed</option>
+
+</select>
+
+<label>
+
+Finishing
+
+</label>
+
+<select id="finishStatus" style="width:100%;padding:12px;border-radius:8px;">
+
+<option>Not Started</option>
+
+<option>In Progress</option>
+
+<option>Completed</option>
+
+</select>
+
+</div>
+
+<!-- ================= LIVE PREVIEW ================= -->
+
+<div class="card">
+
+<h3>
+
+<i class="fas fa-desktop"></i>
+
+Live Preview
+
+</h3>
+
+<p>
+
+Goal:
+
+<strong id="previewGoal">
+
+R0
+
+</strong>
+
+</p>
+
+<br>
+
+<p>
+
+Raised:
+
+<strong id="previewRaised">
+
+R0
+
+</strong>
+
+</p>
+
+<br>
+
+<p>
+
+Progress:
+
+<strong id="previewPercent">
+
+0%
+
+</strong>
+
+</p>
+
+<br>
+
+<div style="width:100%;height:28px;background:#ddd;border-radius:50px;overflow:hidden;">
+
+<div id="previewBar"
+
+style="height:100%;width:0%;background:#800020;transition:.5s;">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= BUTTONS ================= -->
+
+<div style="text-align:center;margin-top:40px;">
+
+<button
+class="saveBtn"
+onclick="saveData()">
+
+<i class="fas fa-save"></i>
+
+Save Changes
+
+</button>
+
+<button
+class="saveBtn"
+style="background:#800020;color:white;margin-left:15px;"
+onclick="resetData()">
+
+<i class="fas fa-trash"></i>
+
+Reset
+
+</button>
+
+</div>
+<script>
+
+// ===============================
+// ADMIN PASSWORD
+// Change this to your own password
+// ===============================
+
+const ADMIN_PASSWORD = "Makonyana1969";
+
+
+// ===============================
+// LOGIN
+// ===============================
+
+function login(){
+
+    const pass = document.getElementById("password").value;
+
+    if(pass === ADMIN_PASSWORD){
+
+        document.getElementById("loginBox").style.display="none";
+        document.getElementById("dashboard").style.display="block";
+
+        loadData();
+
+    }else{
+
+        document.getElementById("error").innerHTML =
+        "Password e phoso.";
+
+    }
+
+}
+
+
+// ===============================
+// LOAD SAVED DATA
+// ===============================
+
+function loadData(){
+
+const ids = [
+
+"goal",
+"raised",
+
+"bricksTotal",
+"bricksRaised",
+
+"cementTotal",
+"cementRaised",
+
+"windowsTotal",
+"windowsRaised",
+
+"doorsTotal",
+"doorsRaised",
+
+"roofTotal",
+"roofRaised",
+
+"paintTotal",
+"paintRaised",
+
+"chairsTotal",
+"chairsRaised",
+
+"electricalTotal",
+"electricalRaised",
+
+"plumbingTotal",
+"plumbingRaised",
+
+"latestUpdate",
+
+"donorName",
+"donorAmount",
+
+"foundationStatus",
+"wallsStatus",
+"roofStatus",
+"finishStatus"
+
+];
+
+ids.forEach(id=>{
+
+const saved = localStorage.getItem(id);
+
+if(saved !== null){
+
+document.getElementById(id).value = saved;
+
+}
+
+});
+
+updatePreview();
+
+}
+
+
+// ===============================
+// SAVE DATA
+// ===============================
+
+function saveData(){
+
+const ids = [
+
+"goal",
+"raised",
+
+"bricksTotal",
+"bricksRaised",
+
+"cementTotal",
+"cementRaised",
+
+"windowsTotal",
+"windowsRaised",
+
+"doorsTotal",
+"doorsRaised",
+
+"roofTotal",
+"roofRaised",
+
+"paintTotal",
+"paintRaised",
+
+"chairsTotal",
+"chairsRaised",
+
+"electricalTotal",
+"electricalRaised",
+
+"plumbingTotal",
+"plumbingRaised",
+
+"latestUpdate",
+
+"donorName",
+"donorAmount",
+
+"foundationStatus",
+"wallsStatus",
+"roofStatus",
+"finishStatus"
+
+];
+
+ids.forEach(id=>{
+
+localStorage.setItem(
+
+id,
+
+document.getElementById(id).value
+
+);
+
+});
+
+alert("Data saved successfully!");
+
+updatePreview();
+
+}
+
+
+// ===============================
+// RESET
+// ===============================
+
+function resetData(){
+
+if(confirm("Reset tsotlhe?")){
+
+localStorage.clear();
+
+location.reload();
+
+}
+
+}
+
+
+// ===============================
+// LIVE PREVIEW
+// ===============================
+
+function updatePreview(){
+
+const goal =
+Number(document.getElementById("goal").value) || 0;
+
+const raised =
+Number(document.getElementById("raised").value) || 0;
+
+document.getElementById("goalPreview").innerHTML =
+"R" + goal.toLocaleString();
+
+document.getElementById("raisedPreview").innerHTML =
+"R" + raised.toLocaleString();
+
+document.getElementById("previewGoal").innerHTML =
+"R" + goal.toLocaleString();
+
+document.getElementById("previewRaised").innerHTML =
+"R" + raised.toLocaleString();
+
+let percent = 0;
+
+if(goal>0){
+
+percent=((raised/goal)*100).toFixed(1);
+
+}
+
+document.getElementById("percentPreview").innerHTML =
+percent+"%";
+
+document.getElementById("previewPercent").innerHTML =
+percent+"%";
+
+document.getElementById("previewBar").style.width =
+percent+"%";
+
+}
+
+
+// ===============================
+// UPDATE WHILE TYPING
+// ===============================
+
+document.addEventListener("input",updatePreview);
+
+</script>
+
+
+<footer>
+
+<h3>
+
+Tshenolo The Holy Church
+
+</h3>
+
+<p>
+
+Building Project Administration Dashboard
+
+</p>
+
+<br>
+
+<p>
+
+"Kagiso Makonyana"
+
+</p>
+
+<br>
+
+<p>
+
+© <span id="year"></span>
+
+Tshenolo The Holy Church
+
+</p>
+
+</footer>
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
